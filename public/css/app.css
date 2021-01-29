@@ -32722,6 +32722,43 @@ select {
   color: red;
 }
 
+.dtr {
+  --tw-bg-opacity: 1;
+  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  line-height: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  --tw-text-opacity: 1;
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .dtr {
+    padding: 0.5rem;
+  }
+}
+
+.dtd {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .dtd {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

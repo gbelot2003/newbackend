@@ -3,10 +3,55 @@
         {{ __('Create') }}
     </x-jet-button>
 
+    {{--The data Table--}}
+
+
+    <table class="min-w-full divide-y divide-gray-200 mt-5">
+        <thead>
+            <tr>
+                <th class="dtr">Title</th>
+                <th class="dtr">Link</th>
+                <th class="dtr">Content</th>
+                <th class="dtr">Actions</th>
+            </tr>
+        </thead>
+        <tbody class="bd-wite divide-y divide-gray-200">
+            @if($data->count())
+            @foreach($data as $item)
+            <tr>
+                <td class="dtd">{{ $item->title }}</td>
+                <td class="dtd">
+                    <a target="_blank" class="text-indigo-600 hover:text-indigo-900" href="{{ URL::to('/'. $item->slug) }}">{{ $item->slug }}
+                    </a>
+
+                </td>
+                <td class="dtd">{!! substr($item->content, 0, 50) !!}</td>
+                <td class="px-6 py-4 text-ms text-rigth">
+                    <x-jet-button wire:click="updateShowModal({{ $item->id }})">
+                        {{ __('Update') }}
+                    </x-jet-button>
+                    <x-jet-danger-button wire:click="deleteShowModal({{ $item->id }})">
+                        {{ __('Delete') }}
+                        </x-jet-button>
+                </td>
+            </tr>
+            @endforeach
+            @else
+            <tr>
+                <td class="px-6 py-4 text-ms whitespace-no-wrap" colspan="4">No results Found</td>
+            </tr>
+            @endif
+
+        </tbody>
+    </table>
+
+    {{ $data->links() }}
+
+    {{--The Modal --}}
 
     <x-jet-dialog-modal wire:model="modalFormVisible">
         <x-slot name="title">
-            {{ __('Save Pages') }}
+            {{ __('Save Pages') }} {{ $modalId }}
         </x-slot>
 
         <x-slot name="content">
@@ -49,9 +94,40 @@
                 {{ __('Nevermind') }}
             </x-jet-secondary-button>
 
-            <x-jet-button class="ml-2" wire:loading.attr="disabled" wire:click="create">
-                {{ __('Save') }}
+            @if($modalId)
+            <x-jet-button class="ml-2" wire:loading.attr="disabled" wire:click="update">
+                {{ __('Update') }}
                 </x-jet-danger-button>
+                @else
+                <x-jet-button class="ml-2" wire:loading.attr="disabled" wire:click="create">
+                    {{ __('Create') }}
+                    </x-jet-danger-button>
+                    @endif
+
+        </x-slot>
+    </x-jet-dialog-modal>
+
+    {{-- delete modal --}}
+    <x-jet-dialog-modal wire:model="modalDeletePage">
+        <x-slot name="title">
+            {{ __('Delete Page') }}
+        </x-slot>
+
+        <x-slot name="content">
+            <p class="text-justify">
+                {{ __('Are you sure you want to delete the page ')}} <span class="text-red-900 text-bold uppercase">"{{ $title }}"</span>
+                {{ __('Once your account is deleted, all of its resources and data will be permanently deleted.') }}
+            </p>
+        </x-slot>
+
+        <x-slot name="footer">
+            <x-jet-secondary-button wire:click="$toggle('modalDeletePage')" wire:loading.attr="disabled">
+                {{ __('Nevermind') }}
+            </x-jet-secondary-button>
+
+            <x-jet-danger-button class="ml-2" wire:click="deletePage" wire:loading.attr="disabled">
+                {{ __('Delete Account') }}
+            </x-jet-danger-button>
         </x-slot>
     </x-jet-dialog-modal>
 </div>

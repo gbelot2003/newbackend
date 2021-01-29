@@ -5,19 +5,29 @@ namespace App\Http\Livewire;
 use App\Models\Page;
 use App\Custom\Slugs;
 use Livewire\Component;
+use Livewire\WithPagination;
 use Illuminate\Validation\Rule;
 
 class Pages extends Component
 {
 
+    use WithPagination;
     public $slug;
+    public $modalId;
     public $title;
     public $content;
-    public $modalFormVisible = true;
+    public $modalFormVisible = false;
+    public $modalDeletePage = false;
+    public $deleteItem;
 
     public function __contruct()
     {
         $this->slugGenerator = new Slugs();
+    }
+
+    public function mount()
+    {
+        //$this->resetPage();
     }
 
     /**
@@ -29,6 +39,7 @@ class Pages extends Component
         $this->slug = null;
         $this->content = null;
         $this->message = null;
+        $this->modalId = null;
     }
 
     /**
@@ -50,9 +61,66 @@ class Pages extends Component
     {
         return [
             'title' => 'required',
-            'slug' => ['required', Rule::unique('pages', 'slug')],
+            'slug' => ['required', Rule::unique('pages', 'slug')->ignore($this->modalId)],
             'content' => 'required'
         ];
+    }
+
+    /**
+     * Load the model data 
+     * of this component.
+     * 
+     * @return void
+     */
+    public function loadModal()
+    {
+        $data = Page::find($this->modalId);
+        $this->title = $data->title;
+        $this->slug = $data->slug;
+        $this->content = $data->content;
+    }
+    
+    /**
+     * Show the Modal to edit 
+     * the information.
+     */
+    public function updateShowModal($id)
+    {
+        $this->resetValidation();
+        $this->modalId = $id;
+        $this->modalFormVisible = true;
+        $this->loadModal($id);
+    }
+
+    /**
+     *  Show Delete modal
+     */
+    public function deleteShowModal($id)
+    {
+        $this->modalId = $id;
+        $this->modalDeletePage = true;
+        $this->loadModalDelete($id);
+    }
+
+    /**
+     * Load info to delete
+     */
+    public function loadModalDelete()
+    {
+        $data = Page::find($this->modalId);
+        $this->title = $data->title;
+        $this->slug = $data->slug;
+        $this->content = $data->content;
+    }
+
+    /**
+     * Delete the record
+     */
+    public function deletePage()
+    {
+        Page::destroy($this->modalId);
+        $this->modalDeletePage = false;
+        $this->resetPage();
     }
 
     /**
@@ -95,12 +163,32 @@ class Pages extends Component
         $this->clearVars();
     }
 
+    public function update()
+    {
+        $this->validate();
+        Page::find($this->modalId)->update($this->modelData());
+        $this->modalFormVisible = false;
+        $this->clearVars();
+    }
+
+    /**
+     * The read function
+     * 
+     * @return void
+     */
+    public function read()
+    {
+        return Page::paginate(5);
+    }
+
     /**
      * The livewire render function
      */
     public function render()
     {
-        return view('livewire.pages');
+        return view('livewire.pages', [
+            'data' => $this->read(),
+        ]);
     }
 
 
