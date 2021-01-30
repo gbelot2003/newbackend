@@ -1,0 +1,9 @@
+{
+    "bracket-pair-colorizer-2.excludedLanguages": [
+        "emmet.triggerExpansionOnTab": true, // enable tab to expanse emmet tags
+        "blade.format.enable": true,         // if you would like to enable blade format
+    ],
+    "[blade]": {
+        "editor.autoClosingBrackets": "always"
+    },
+}

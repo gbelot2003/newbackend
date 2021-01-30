@@ -27,4 +27,8 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function(){
     Route::get('/pages', function(){
         return view('admin.pages');
     })->name('pages');
+
+    Route::get('/users', function(){
+        return view('admin.users');
+    })->name('users');
 });
