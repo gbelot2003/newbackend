@@ -1,38 +1,45 @@
 <div class="p-6">
-    <x-jet-button wire:click="createShowModal">
-        {{ __('Create') }}
-    </x-jet-button>
+    <div class="flex items-center justify-end px-4 py-3 text-right sm:px-6">
+        <x-jet-button wire:click="createShowModal">
+            <svg class="h-6 w-6 mr-1 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
 
+            {{ __('Create') }}
+        </x-jet-button>
+    </div>
     {{--The data Table--}}
 
 
-    <table class="min-w-full divide-y divide-gray-200 mt-5">
+    <table class="table">
         <thead>
             <tr>
-                <th class="dtr">Title</th>
-                <th class="dtr">Link</th>
-                <th class="dtr">Content</th>
-                <th class="dtr">Actions</th>
+                <th class="th">Title</th>
+                <th class="th">Link</th>
+                <th class="th">Content</th>
+                <th class="th">Actions</th>
             </tr>
         </thead>
-        <tbody class="bd-wite divide-y divide-gray-200">
+        <tbody class="tbody">
             @if($data->count())
             @foreach($data as $item)
             <tr>
-                <td class="dtd">{{ $item->title }}</td>
-                <td class="dtd">
+                <td class="td">{{ $item->title }}</td>
+                <td class="td">
                     <a target="_blank" class="text-indigo-600 hover:text-indigo-900" href="{{ URL::to('/'. $item->slug) }}">{{ $item->slug }}
                     </a>
 
                 </td>
-                <td class="dtd">{!! substr($item->content, 0, 50) !!}</td>
-                <td class="px-6 py-4 text-ms text-rigth">
-                    <x-jet-button wire:click="updateShowModal({{ $item->id }})">
-                        {{ __('Update') }}
-                    </x-jet-button>
-                    <x-jet-danger-button wire:click="deleteShowModal({{ $item->id }})">
-                        {{ __('Delete') }}
+                <td class="td">{!! substr($item->content, 0, 50) !!}</td>
+                <td>
+                    <div class="actions">
+                        <x-jet-button wire:click="updateShowModal({{ $item->id }})">
+                            {{ __('Update') }}
                         </x-jet-button>
+                        <x-jet-danger-button wire:click="deleteShowModal({{ $item->id }})">
+                            {{ __('Delete') }}
+                        </x-jet-danger-button>
+                    </div>
                 </td>
             </tr>
             @endforeach

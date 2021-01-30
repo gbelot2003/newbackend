@@ -1,0 +1,28 @@
+.table {
+    @apply bg-gray-200 text-black w-full shadow-sm;
+}
+.table th {
+    @apply md:p-2 my-4 bg-gray-500 text-center text-xs leading-4 font-medium text-white uppercase tracking-wider;
+}
+.table th:nth-child(4) {
+    @apply w-auto;
+}
+
+.table tbody {
+    @apply bg-white divide-y divide-gray-200;
+}
+
+.table tr:nth-child(odd) {
+}
+
+.table tr:nth-child(even) {
+    @apply bg-gray-100;
+}
+
+.table td {
+    @apply md:px-6 py-4 text-sm whitespace-nowrap text-left;
+}
+
+.actions {
+    @apply text-right justify-end;
+}
