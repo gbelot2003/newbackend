@@ -15,6 +15,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Created At</th>
+                <th>User Status</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -26,6 +27,7 @@
                 <td class="td">{{ $item->name }}</td>
                 <td class="td">{{ $item->email }}</td>
                 <td class="td">{{ $item->updated_at}} </td>
+                <td class="td">{{ $item->state }}</td>
                 <td class="">
                     <div class="actions">
                         <x-jet-button wire:click="">
@@ -47,4 +49,6 @@
             @endif
         </tbody>
     </table>
+    {{ $data->links() }}
+
 </div>
