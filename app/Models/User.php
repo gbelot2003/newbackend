@@ -63,4 +63,12 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $appends = [
         'profile_photo_url',
     ];
+
+    /**
+     * @return bool
+     */
+    public function isNotActivated()
+    {
+        return $this->state ? true : false;
+    }
 }
