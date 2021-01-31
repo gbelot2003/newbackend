@@ -27,7 +27,13 @@
                 <td class="td">{{ $item->name }}</td>
                 <td class="td">{{ $item->email }}</td>
                 <td class="td">{{ $item->updated_at}} </td>
-                <td class="td">{{ $item->state }}</td>
+                <td class="td">
+                    @if($item->state == 1)
+                        Active
+                    @else
+                        Inactive
+                    @endif
+                </td>
                 <td class="">
                     <div class="actions">
                         <x-jet-button wire:click="">

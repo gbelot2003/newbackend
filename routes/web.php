@@ -8,7 +8,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['middleware' => ['auth:sanctum', 'verified']], function(){
+/** add verify middleware later */
+Route::group(['middleware' => ['auth:sanctum']], function(){
 
     Route::get('/dashboard', function(){
         return view('dashboard');
