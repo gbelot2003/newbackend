@@ -45,17 +45,15 @@
                         <td class="">
                             <div class="actions">
                                 <x-jet-button wire:click="">
-                                    {{ __('Update') }}
+                                    {{ __('Show') }}
                                 </x-jet-button>
                                 <x-jet-danger-button wire:click="">
-                                    {{ __('Cancel') }}
+                                    {{ __('Suspend') }}
                                 </x-jet-danger-button>
                             </div>
-
                         </td>
                     </tr>
                 @endforeach
-
             @else
                 <tr>
                     <td colspan="4">No results found</td>
@@ -64,5 +62,7 @@
         </tbody>
     </table>
     {{ $data->links() }}
+
+
 
 </div>
