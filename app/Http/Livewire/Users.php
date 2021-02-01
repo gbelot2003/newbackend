@@ -9,9 +9,10 @@ class Users extends Component
 {
 
 
+        
     /**
-     * The read function
-     * 
+     * Method read
+     *
      * @return void
      */
     public function read()
@@ -19,7 +20,12 @@ class Users extends Component
         return User::OrderBy('id', 'DESC')->paginate(10);
     }
 
-
+    
+    /**
+     * Method render
+     *
+     * @return void
+     */
     public function render()
     {
         return view('livewire.users', [
