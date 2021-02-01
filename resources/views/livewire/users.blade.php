@@ -28,7 +28,7 @@
                 <td class="td">{{ $item->name }}</td>
                 <td class="td">{{ $item->email }}</td>
                 <td class="td">{{ $item->updated_at->format('d/m/Y') }} </td>
-                <td class="td">{{ $item->roles }}</td>
+                <td class="td">{{ $item->roles[0]->name }}</td>
                 <td class="td">
                     @if($item->state == 1)
                         Active
