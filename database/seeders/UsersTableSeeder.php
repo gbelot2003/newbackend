@@ -23,8 +23,8 @@ class UsersTableSeeder extends Seeder
             0 => 
             array (
                 'id' => 1,
-                'name' => 'Jaquan Hegmann',
-                'email' => 'kyle.sauer@example.com',
+                'name' => 'Gerardo Belot',
+                'email' => 'gbelot2003@example.com',
                 'email_verified_at' => '2021-01-30 17:16:44',
                 'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
                 'two_factor_secret' => NULL,
