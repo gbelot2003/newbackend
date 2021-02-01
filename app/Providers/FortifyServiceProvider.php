@@ -44,8 +44,8 @@ class FortifyServiceProvider extends ServiceProvider
             return Limit::perMinute(5)->by($request->session()->get('login.id'));
         });
 
-        Fortify::verifyEmailView(function(){
+        /**Fortify::verifyEmailView(function(){
             return view('admin.verify-email');
-        });
+        });**/
     }
 }

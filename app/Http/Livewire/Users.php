@@ -16,7 +16,7 @@ class Users extends Component
      */
     public function read()
     {
-        return User::OrderBy('id', 'DESC')->paginate(5);
+        return User::OrderBy('id', 'DESC')->paginate(10);
     }
 
 
