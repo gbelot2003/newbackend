@@ -27,7 +27,7 @@ class RolesTableSeeder extends Seeder
         ];
 
         $adminPerms = [
-            ''
+            'users_view', 'users_edit', 'users_suspend'
         ];
 
         foreach ($roles as $roles) {

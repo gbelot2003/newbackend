@@ -20,7 +20,7 @@ class PermissionsTableSeeder extends Seeder
 
         // Permisos de administrador
         $permissions = [
-
+            'users_view', 'users_edit', 'users_suspend'
         ];
 
 

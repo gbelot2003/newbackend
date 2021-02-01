@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
@@ -121,246 +122,29 @@ class UsersTableSeeder extends Seeder
                 'created_at' => '2021-01-30 17:16:45',
                 'updated_at' => '2021-01-30 17:16:45',
             ),
-            6 => 
-            array (
-                'id' => 7,
-                'name' => 'Dr. Cruz Harvey',
-                'email' => 'dorothy56@example.org',
-                'email_verified_at' => '2021-01-30 17:16:44',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                'two_factor_secret' => NULL,
-                'two_factor_recovery_codes' => NULL,
-                'remember_token' => 'ToGmDTwXv2',
-                'current_team_id' => NULL,
-                'profile_photo_path' => NULL,
-                'state' => 1,
-                'deleted_at' => NULL,
-                'created_at' => '2021-01-30 17:16:45',
-                'updated_at' => '2021-01-30 17:16:45',
-            ),
-            7 => 
-            array (
-                'id' => 8,
-                'name' => 'Mrs. Kari Flatley',
-                'email' => 'myrl06@example.org',
-                'email_verified_at' => '2021-01-30 17:16:44',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                'two_factor_secret' => NULL,
-                'two_factor_recovery_codes' => NULL,
-                'remember_token' => 'LBAlDPfyLX',
-                'current_team_id' => NULL,
-                'profile_photo_path' => NULL,
-                'state' => 1,
-                'deleted_at' => NULL,
-                'created_at' => '2021-01-30 17:16:45',
-                'updated_at' => '2021-01-30 17:16:45',
-            ),
-            8 => 
-            array (
-                'id' => 9,
-                'name' => 'Mr. Isadore Braun',
-                'email' => 'windler.jessyca@example.org',
-                'email_verified_at' => '2021-01-30 17:16:44',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                'two_factor_secret' => NULL,
-                'two_factor_recovery_codes' => NULL,
-                'remember_token' => 'CnKG4gT9kG',
-                'current_team_id' => NULL,
-                'profile_photo_path' => NULL,
-                'state' => 1,
-                'deleted_at' => NULL,
-                'created_at' => '2021-01-30 17:16:45',
-                'updated_at' => '2021-01-30 17:16:45',
-            ),
-            9 => 
-            array (
-                'id' => 10,
-                'name' => 'Marjorie Hoeger',
-                'email' => 'isac35@example.org',
-                'email_verified_at' => '2021-01-30 17:16:44',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                'two_factor_secret' => NULL,
-                'two_factor_recovery_codes' => NULL,
-                'remember_token' => 'fZU1TPYH8Y',
-                'current_team_id' => NULL,
-                'profile_photo_path' => NULL,
-                'state' => 1,
-                'deleted_at' => NULL,
-                'created_at' => '2021-01-30 17:16:45',
-                'updated_at' => '2021-01-30 17:16:45',
-            ),
-            10 => 
-            array (
-                'id' => 11,
-                'name' => 'Missouri Kunze',
-                'email' => 'brekke.madisyn@example.com',
-                'email_verified_at' => '2021-01-30 17:16:44',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                'two_factor_secret' => NULL,
-                'two_factor_recovery_codes' => NULL,
-                'remember_token' => 'FnxDCv8DzM',
-                'current_team_id' => NULL,
-                'profile_photo_path' => NULL,
-                'state' => 1,
-                'deleted_at' => NULL,
-                'created_at' => '2021-01-30 17:16:45',
-                'updated_at' => '2021-01-30 17:16:45',
-            ),
-            11 => 
-            array (
-                'id' => 12,
-                'name' => 'Pink Orn',
-                'email' => 'angelita85@example.com',
-                'email_verified_at' => '2021-01-30 17:16:44',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                'two_factor_secret' => NULL,
-                'two_factor_recovery_codes' => NULL,
-                'remember_token' => 'DGPT0ud9tN',
-                'current_team_id' => NULL,
-                'profile_photo_path' => NULL,
-                'state' => 1,
-                'deleted_at' => NULL,
-                'created_at' => '2021-01-30 17:16:45',
-                'updated_at' => '2021-01-30 17:16:45',
-            ),
-            12 => 
-            array (
-                'id' => 13,
-                'name' => 'Kaleb Emard',
-                'email' => 'wade.padberg@example.com',
-                'email_verified_at' => '2021-01-30 17:16:44',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                'two_factor_secret' => NULL,
-                'two_factor_recovery_codes' => NULL,
-                'remember_token' => 'mYFV3aASps',
-                'current_team_id' => NULL,
-                'profile_photo_path' => NULL,
-                'state' => 1,
-                'deleted_at' => NULL,
-                'created_at' => '2021-01-30 17:16:45',
-                'updated_at' => '2021-01-30 17:16:45',
-            ),
-            13 => 
-            array (
-                'id' => 14,
-                'name' => 'Zander Hudson',
-                'email' => 'ewalsh@example.org',
-                'email_verified_at' => '2021-01-30 17:16:44',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                'two_factor_secret' => NULL,
-                'two_factor_recovery_codes' => NULL,
-                'remember_token' => 'mtCPz5gEHA',
-                'current_team_id' => NULL,
-                'profile_photo_path' => NULL,
-                'state' => 1,
-                'deleted_at' => NULL,
-                'created_at' => '2021-01-30 17:16:45',
-                'updated_at' => '2021-01-30 17:16:45',
-            ),
-            14 => 
-            array (
-                'id' => 15,
-                'name' => 'Daron Kiehn',
-                'email' => 'roderick.waters@example.com',
-                'email_verified_at' => '2021-01-30 17:16:44',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                'two_factor_secret' => NULL,
-                'two_factor_recovery_codes' => NULL,
-                'remember_token' => 'V7xqAZ2C1i',
-                'current_team_id' => NULL,
-                'profile_photo_path' => NULL,
-                'state' => 1,
-                'deleted_at' => NULL,
-                'created_at' => '2021-01-30 17:16:45',
-                'updated_at' => '2021-01-30 17:16:45',
-            ),
-            15 => 
-            array (
-                'id' => 16,
-                'name' => 'Brock Stamm',
-                'email' => 'pschultz@example.net',
-                'email_verified_at' => '2021-01-30 17:16:44',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                'two_factor_secret' => NULL,
-                'two_factor_recovery_codes' => NULL,
-                'remember_token' => 'JfF0MvKJgj',
-                'current_team_id' => NULL,
-                'profile_photo_path' => NULL,
-                'state' => 1,
-                'deleted_at' => NULL,
-                'created_at' => '2021-01-30 17:16:45',
-                'updated_at' => '2021-01-30 17:16:45',
-            ),
-            16 => 
-            array (
-                'id' => 17,
-                'name' => 'Jolie Cole',
-                'email' => 'pbrekke@example.net',
-                'email_verified_at' => '2021-01-30 17:16:44',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                'two_factor_secret' => NULL,
-                'two_factor_recovery_codes' => NULL,
-                'remember_token' => 'kxVikBQAwC',
-                'current_team_id' => NULL,
-                'profile_photo_path' => NULL,
-                'state' => 1,
-                'deleted_at' => NULL,
-                'created_at' => '2021-01-30 17:16:45',
-                'updated_at' => '2021-01-30 17:16:45',
-            ),
-            17 => 
-            array (
-                'id' => 18,
-                'name' => 'Jeanette Schinner Jr.',
-                'email' => 'emard.vern@example.org',
-                'email_verified_at' => '2021-01-30 17:16:44',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                'two_factor_secret' => NULL,
-                'two_factor_recovery_codes' => NULL,
-                'remember_token' => 'fKpGnB5LrC',
-                'current_team_id' => NULL,
-                'profile_photo_path' => NULL,
-                'state' => 1,
-                'deleted_at' => NULL,
-                'created_at' => '2021-01-30 17:16:45',
-                'updated_at' => '2021-01-30 17:16:45',
-            ),
-            18 => 
-            array (
-                'id' => 19,
-                'name' => 'Emma Boehm IV',
-                'email' => 'giovani.vandervort@example.net',
-                'email_verified_at' => '2021-01-30 17:16:44',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                'two_factor_secret' => NULL,
-                'two_factor_recovery_codes' => NULL,
-                'remember_token' => 'iXXUfMawBf',
-                'current_team_id' => NULL,
-                'profile_photo_path' => NULL,
-                'state' => 1,
-                'deleted_at' => NULL,
-                'created_at' => '2021-01-30 17:16:45',
-                'updated_at' => '2021-01-30 17:16:45',
-            ),
-            19 => 
-            array (
-                'id' => 20,
-                'name' => 'Christian Muller',
-                'email' => 'mweissnat@example.net',
-                'email_verified_at' => '2021-01-30 17:16:44',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-                'two_factor_secret' => NULL,
-                'two_factor_recovery_codes' => NULL,
-                'remember_token' => 'vEfr5t5PGz',
-                'current_team_id' => NULL,
-                'profile_photo_path' => NULL,
-                'state' => 1,
-                'deleted_at' => NULL,
-                'created_at' => '2021-01-30 17:16:45',
-                'updated_at' => '2021-01-30 17:16:45',
-            ),
         ));
-        
-        
+
+        $user = User::find(1);
+        $user->assignRole('administrator');
+
+        $user = User::find(2);
+        $user->assignRole('moderator');
+
+        $user = User::find(3);
+        $user->assignRole('costumer');
+
+        $user = User::find(4);
+        $user->assignRole('user');
+
+        $user = User::find(4);
+        $user->assignRole('user');
+
+        $user = User::find(5);
+        $user->assignRole('user');
+
+        $user = User::find(6);
+        $user->assignRole('user');
+
+
     }
 }
