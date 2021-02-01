@@ -44,10 +44,10 @@
                         </td>
                         <td class="">
                             <div class="actions">
-                                <x-jet-button wire:click="">
+                                <x-jet-button >
                                     {{ __('Show') }}
                                 </x-jet-button>
-                                <x-jet-danger-button wire:click="">
+                                <x-jet-danger-button wire:click="loadSuspendModal({{ $item->id }})">
                                     {{ __('Suspend') }}
                                 </x-jet-danger-button>
                             </div>
@@ -63,6 +63,28 @@
     </table>
     {{ $data->links() }}
 
+    {{--  Suspend Account Modal --}}
+    <x-jet-dialog-modal wire:model="showSuspendModal">
+        <x-slot name="title" >
+            <span class="text-red-900">{{ __('Suspend User Account') }}</span>
+        </x-slot>
 
+        <x-slot name="content">
+            @if ($user == null)
+                <p>You are about to suspend the account of {{ $email }}</p> 
+            @endif
+            
+        </x-slot>
+
+        <x-slot name="footer">
+            <x-jet-secondary-button wire:click="$toggle('showSuspendModal')" wire:loading.attr="disabled">
+                {{ __('Nevermind') }}
+            </x-jet-secondary-button>
+
+            <x-jet-danger-button class="ml-2" wire:click="" wire:loading.attr="disabled">
+                {{ __('Suspend Account') }}
+            </x-jet-danger-button>
+        </x-slot>
+    </x-jet-dialog-modal>
 
 </div>
